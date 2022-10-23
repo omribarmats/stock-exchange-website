@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    ;
+}
+
+.searchResults,
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    max-width: 50%;
+
+}
+
+.searchResults li {
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px gainsboro solid;
+}
+
+.searchResults li:hover {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+a {
+    color: #17A2B8;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #17A2B8;
+}
+
+.loader {
+    width: 50rem;
+    height: 50rem;
+}
+
+.loadingSpot {
+    position: relative;
+}
+
+.marqueeElement  {
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    background-color: #E3E8EF;
+
+}
+
+.marquee {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: stretch;
+    width: 3000%;
+    height: 40px;
+    position: absolute;
+    overflow: hidden;
+    animation: marquee 40s linear infinite;
+}
+
+.marquee:hover {
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused;
+    animation-play-state:paused;
+  }
+
+.marquee-item {
+    float: left;
+    width: 2000%;
+    overflow: hidden;
+}
+
+.marquee-price {
+    color: #17A2B8;
+}
+
+@keyframes marquee {
+    0% { left: 10%; }
+    100% { left: -100%; }
+  }

@@ -16,20 +16,20 @@
     <div id="marquee"></div>
     <div id="form"></div>
     <div id="results"></div>
-    <!-- <script src="JS\app.js"></script> -->
     <script src="JS\marquee.js"></script>
-    <script src="JS\searchResults.js"></script>
     <script src="JS\searchForm.js"></script>
-    <script src="JS\searchy.js"></script>
-    
-
+    <script src="JS\searchResult.js"></script>
     <script>
-     (async function () {
-        const marquee = new Marquee(document.getElementById('marquee'));
-        marquee.load()
-        const form = new SearchForm(document.getElementById("form"));
-        const results = new SearchResults(document.getElementById('results'));
-    })();
+        (async function () {
+            const marquee = new Marquee(document.getElementById('marquee'));
+            marquee.load()
+            const form = new SearchForm(document.getElementById('form'));
+            const results = new SearchResult(document.getElementById("results"));
+            form.onSearch((companies) => {
+                results.renderResults(companies);
+            });
+        })();
     </script>
 </body>
+
 </html>

@@ -8,10 +8,10 @@
     ;
 }
 
-.searchResults,
-ul {
+.searchResults {
     list-style-type: none;
-    padding-left: 0;
+    padding-left: 4vw;
+    padding-top: 1vw;
     max-width: 50%;
 
 }
@@ -26,6 +26,7 @@ ul {
 .searchResults li:hover {
     font-weight: 500;
     cursor: pointer;
+    text-decoration: none;
 }
 
 a {
@@ -37,6 +38,14 @@ a:hover {
     color: #17A2B8;
 }
 
+.item-image {
+    margin-right: 5px;
+}
+
+.itemChange {
+    margin-left: 5px;
+}
+
 .loader {
     width: 50rem;
     height: 50rem;
@@ -46,40 +55,38 @@ a:hover {
     position: relative;
 }
 
-.marqueeElement  {
-    height: 40px;
+.marqueeContainer {
+    background-color: #E3E8EF;
+    height: 20px;
     overflow: hidden;
-    position: relative;
     display: flex;
     align-items: center;
+    font-weight: 100;
+    font-size: 15px;
     padding-top: 10px;
-    background-color: #E3E8EF;
-
+    padding: 0;
 }
 
 .marquee {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: stretch;
-    width: 3000%;
-    height: 40px;
-    position: absolute;
-    overflow: hidden;
-    animation: marquee 40s linear infinite;
+    animation: marquee 190s linear infinite;
 }
 
 .marquee:hover {
-    -webkit-animation-play-state:paused;
-    -moz-animation-play-state:paused;
-    -o-animation-play-state:paused;
-    animation-play-state:paused;
-  }
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
 
 .marquee-item {
-    float: left;
-    width: 2000%;
-    overflow: hidden;
+    width: 150px;
+    margin: 0.5em;
+    padding: 0.5em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease;
 }
 
 .marquee-price {
@@ -87,6 +94,17 @@ a:hover {
 }
 
 @keyframes marquee {
-    0% { left: 10%; }
-    100% { left: -100%; }
-  }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translate(-50%);
+    }
+}
+
+.hl-bg {
+    background-color: blanchedalmond;
+    border: none;
+    border-radius: 2px;
+}
